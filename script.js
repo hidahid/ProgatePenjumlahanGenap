@@ -1,7 +1,4 @@
-getInput = () => {
-  let input = document.getElementById("angka").value;
-  return input;
-};
+let getInput = document.even.angka.value;
 
 getNumber = (int) => {
   let result = [];
@@ -12,14 +9,20 @@ getNumber = (int) => {
 };
 
 getEven = (int) => {
-  let result = 0;
   let getArr = getNumber(int);
+  let getDetail = "";
+  let getResult = 0;
 
   for (let i = 0; i < getArr.length; i++) {
     let store = getArr[i];
 
     if (store % 2 === 0) {
-      result += getArr[i];
+      getDetail += getArr[i];
+      getResult += getArr[i];
     }
   }
+
+  document.even.array.value = getArr;
+  document.even.details.value = getDetail;
+  document.even.result.value = getResult;
 };
